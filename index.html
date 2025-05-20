@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Pokémon Memory Game For Pokemon lovers</h1>
+            <div class="status-container">
+                <div class="status">
+                    <div>Clicks: <span id="clicks">0</span></div>
+                    <div>Pairs Left: <span id="pairs-left">0</span></div>
+                    <div>Pairs Matched: <span id="pairs-matched">0</span></div>
+                    <div>Total Pairs: <span id="total-pairs">0</span></div>
+                    <div>Time: <span id="timer">00:00</span></div>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="difficulty">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy (4 pairs)</option>
+                        <option value="medium" selected>Medium (8 pairs)</option>
+                        <option value="hard">Hard (12 pairs)</option>
+                    </select>
+                </div>
+                <div class="theme">
+                    <label for="theme">Theme:</label>
+                    <select id="theme">
+                        <option value="light" selected>Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="pokemon">Poké Theme</option>
+                    </select>
+                </div>
+                <button id="start-btn">Start Game</button>
+                <button id="reset-btn" disabled>Reset Game</button>
+                <button id="power-up-btn" disabled>Power-Up (1)</button>
+            </div>
+        </header>
+        
+        <div id="game-message" class="game-message hidden"></div>
+        
+        <div id="game-board" class="game-board"></div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
